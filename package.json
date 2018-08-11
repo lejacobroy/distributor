@@ -1,0 +1,11 @@
+{
+  "name": "distributeur",
+  "version": "1.0.0",
+  "description": "Distribute cat food using a stepper motor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Roy",
+  "license": "ISC"
+}
