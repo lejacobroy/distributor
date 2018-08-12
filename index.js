@@ -52,8 +52,7 @@ while(1){
 	for (var y = steps - 1; y >= 0; y--) {
 		if (i==7) {
 			i=0;
-		}
-	}else{
+		} else {
 		i=i+1;
 	}
 	y=y+2;
