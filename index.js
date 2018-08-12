@@ -37,5 +37,5 @@ for (var i = 0; i < steps; i++) {
         rpio.usleep(3); 
         /* Off for half a second (500ms) */
         rpio.write(pin, rpio.LOW);
-        rpio.write(pin3, rpio.LOW);
+        rpio.write(pin2, rpio.LOW);
 }
