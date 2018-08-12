@@ -7,7 +7,7 @@ var pin1 = 13;
 var pin2 = 11;
 var pin3 = 15;
 var pin4 = 12;
-var steps = 50;
+var steps = 10;
 var i = 0;
 var y = 0;
 
@@ -47,8 +47,8 @@ rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
         rpio.write(pin2, rpio.LOW);
 }
 */
+//if(current_hour == 3 || current_hour == 6 || current_hour == 9 || current_hour == 12 || current_hour == 15 || current_hour == 18 || current_hour == 21 || current_hour == 24){
 while(1){
-
 	for (var y = steps - 1; y >= 0; y--) {
 		if (i==7) {
 			i=0;
