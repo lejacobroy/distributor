@@ -50,8 +50,7 @@ rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
 */
 //if(current_hour == 3 || current_hour == 6 || current_hour == 9 || current_hour == 12 || current_hour == 15 || current_hour == 18 || current_hour == 21 || current_hour == 24){
 
-while(1){
-	sleep.sleep(5);
+//while(1){
 	for (var y = 0; y <= steps; y++) {
 		if (i==7) {
 			i=0;
@@ -128,7 +127,7 @@ while(1){
 	}
 	i=i+1;
 	}	
-}
+//}
 
 rpio.close(pin1, rpio.PIN_RESET);
 rpio.close(pin2, rpio.PIN_RESET);
