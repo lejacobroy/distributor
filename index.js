@@ -128,7 +128,7 @@ while(1){
 	}
 	i=i+1;
 	}	
-
+}
 
 rpio.close(pin1, rpio.PIN_RESET);
 rpio.close(pin2, rpio.PIN_RESET);
