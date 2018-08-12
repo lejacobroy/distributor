@@ -1,13 +1,14 @@
+
 var rpio = require('rpio');
 var sleep = require('sleep');
 
 var date = new Date();
 var current_hour = date.getHours();
 
-var pin1 = 13;
-var pin2 = 11;
-var pin3 = 15;
-var pin4 = 12;
+var pin1 = 15;
+var pin2 = 12;
+var pin3 = 13;
+var pin4 = 11;
 var steps = 400;
 var i = 0;
 var y = 0;
