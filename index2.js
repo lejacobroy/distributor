@@ -213,16 +213,16 @@ function reverse() {
 }
 
 reverse();
-sleep(1);
+sleep.sleep(1);
 
 forward();
-sleep(1);
+sleep.sleep(1);
 
 reverse();
-sleep(1);
+sleep.sleep(1);
 
 forward();
-sleep(1);
+sleep.sleep(1);
 
 rpio.close(pin1, rpio.PIN_RESET);
 rpio.close(pin2, rpio.PIN_RESET);
