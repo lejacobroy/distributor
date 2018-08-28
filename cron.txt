@@ -4,5 +4,5 @@
 # | | | +--- Month (1 -12)                    | Aliases: @reboot -> Run once at startup; @hourly -> 0 * * * *;
 # | | | | +- Day Of Week (0-6) (Sunday = 0)   | @daily -> 0 0 * * *; @weekly -> 0 0 * * 0; @monthly ->0 0 1 * *;
 # | | | | |                                   | @yearly -> 0 0 1 1 *;
-#0 0,3,6,9,12,15,18,21 * * * node /home/pi/GitHub/distributeur/index2.js > /home/pi/GitHub/distributeur/cron.log
-/2 * * * * node /home/pi/GitHub/distributeur/index2.js > /home/pi/GitHub/distributeur/cron.log
+#0 0,3,6,9,12,15,18,21 * * * node /home/pi/GitHub/distributor/index2.js > /home/pi/GitHub/distributor/cron.log
+/2 * * * * node /home/pi/GitHub/distributor/index2.js > /home/pi/GitHub/distributor/cron.log
