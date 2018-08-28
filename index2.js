@@ -141,7 +141,7 @@ function reverse() {
 		i=i+1;
 	}
 	y=y+2;
-	if (i==0) {
+	if (i==7) {
 		rpio.open(pin1, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
@@ -149,47 +149,47 @@ function reverse() {
 		rpio.usleep(3); 
 	}
 
-	if (i==1) {
+	if (i==6) {
 		rpio.open(pin1, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
-		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.usleep(3); 
-	}
-
-	if (i==2) {
-		rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
-		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
-		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
-		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.usleep(3); 
-	}
-
-	if (i==3) {
-		rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
-		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
-		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
-		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.usleep(3); 
-	}
-
-	if (i==4) {
-		rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
-		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
-		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
 		rpio.usleep(3); 
 	}
 
 	if (i==5) {
 		rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
+		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
+		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
+		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
+		rpio.usleep(3); 
+	}
+
+	if (i==4) {
+		rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
+		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
+		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
+		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
+		rpio.usleep(3); 
+	}
+
+	if (i==3) {
+		rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
+		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
+		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
+		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
+		rpio.usleep(3); 
+	}
+
+	if (i==2) {
+		rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
 		rpio.usleep(3); 
 	}
 
-	if (i==6) {
+	if (i==1) {
 		rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
@@ -197,7 +197,7 @@ function reverse() {
 		rpio.usleep(3); 
 	}
 
-	if (i==7) {
+	if (i==0) {
 		rpio.open(pin1, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
