@@ -216,7 +216,7 @@ rpio.close(pin2, rpio.PIN_RESET);
 rpio.close(pin3, rpio.PIN_RESET);
 rpio.close(pin4, rpio.PIN_RESET);
 }
-while (1){
+
 
 	reverse();
 	reset();
@@ -235,4 +235,3 @@ while (1){
 	sleep.sleep(1);
 
 	sleep.sleep(60)
-}
