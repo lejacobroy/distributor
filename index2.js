@@ -1,9 +1,9 @@
 var rpio = require('rpio');
 var sleep = require('sleep');
 
-var date = new Date();
-var current_hour = date.getHours();
-var current_minutes = date.getMinutes();
+//var date = new Date();
+//var current_hour = date.getHours();
+//var current_minutes = date.getMinutes();
 
 var pin1 = 13;
 var pin2 = 11;
@@ -217,7 +217,6 @@ rpio.close(pin3, rpio.PIN_RESET);
 rpio.close(pin4, rpio.PIN_RESET);
 }
 while (1){
-if((current_hour == 3 || current_hour == 6 || current_hour == 9 || current_hour == 12 || current_hour == 15 || current_hour == 18 || current_hour == 21 || current_hour == 24) & current_minutes == 00){
 
 	reverse();
 	reset();
@@ -236,4 +235,4 @@ if((current_hour == 3 || current_hour == 6 || current_hour == 9 || current_hour 
 	sleep.sleep(1);
 
 	sleep.sleep(60)
-}}
+}
