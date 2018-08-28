@@ -212,19 +212,25 @@ function reverse() {
 	}	
 }
 
-reverse();
-sleep.sleep(1);
-
-forward();
-sleep.sleep(1);
-
-reverse();
-sleep.sleep(1);
-
-forward();
-sleep.sleep(1);
-
-rpio.close(pin1, rpio.PIN_RESET);
+function reset(){
+	rpio.close(pin1, rpio.PIN_RESET);
 rpio.close(pin2, rpio.PIN_RESET);
 rpio.close(pin3, rpio.PIN_RESET);
 rpio.close(pin4, rpio.PIN_RESET);
+}
+
+reverse();
+reset();
+sleep.sleep(1);
+
+forward();
+reset();
+sleep.sleep(1);
+
+reverse();
+reset();
+sleep.sleep(1);
+
+forward();
+reset();
+sleep.sleep(1);
