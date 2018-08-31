@@ -35,7 +35,7 @@ rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
 rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
+rpio.open(shaker, rpio.OUTPUT, rpio.HIGH);
 /*
  * The sleep functions block, but rarely in these simple programs does
  * one care about that.  Use a setInterval()/setTimeout() loop instead
@@ -60,9 +60,9 @@ rpio.close(shaker, rpio.PIN_RESET);
 }
 
 function shake(){
-	rpio.open(shaker, rpio.OUTPUT, rpio.HIGH);
-	sleep.sleep(15);
 	rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
+	sleep.sleep(15);
+	rpio.open(shaker, rpio.OUTPUT, rpio.HIGH);
 }
 
 function forward(){
