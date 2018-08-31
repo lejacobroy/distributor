@@ -9,7 +9,7 @@ var pin1 = 13;
 var pin2 = 11;
 var pin3 = 15;
 var pin4 = 12;
-var shaker = 19;
+var shaker = 18;
 var steps = 150;
 var backsteps = 50;
 var i = 0;
@@ -51,6 +51,19 @@ rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
         rpio.write(pin2, rpio.LOW);
 }
 */
+function reset(){
+rpio.close(pin1, rpio.PIN_RESET);
+rpio.close(pin2, rpio.PIN_RESET);
+rpio.close(pin3, rpio.PIN_RESET);
+rpio.close(pin4, rpio.PIN_RESET);
+rpio.close(shaker, rpio.PIN_RESET);
+}
+
+function shake(){
+	rpio.open(shaker, rpio.OUTPUT, rpio.HIGH);
+	sleep.sleep(15);
+	rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
+}
 
 function forward(){
 	for (var y = 0; y <= steps; y++) {
@@ -129,10 +142,13 @@ function forward(){
 	}
 	i=i+1;
 	}	
+	reset();
+	sleep.sleep(1);
 }
 
 function reverse() {
 
+shake();
 		for (var y = 0; y <= backsteps; y++) {
 		if (i==7) {
 			i=0;
@@ -208,40 +224,10 @@ function reverse() {
 		i=0;
 	}
 	i=i+1;
-	}	
-}
-
-function reset(){
-rpio.close(pin1, rpio.PIN_RESET);
-rpio.close(pin2, rpio.PIN_RESET);
-rpio.close(pin3, rpio.PIN_RESET);
-rpio.close(pin4, rpio.PIN_RESET);
-rpio.close(shaker, rpio.PIN_RESET);
-}
-
-function shake(){
-	rpio.open(shaker, rpio.OUTPUT, rpio.HIGH);
-	sleep.sleep(15);
-	rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
-}
-
-
-	shake();
-	reverse();
+	}
 	reset();
-	sleep.sleep(1);
-
+	sleep.sleep(1);	
 	forward();
-	reset();
-	sleep.sleep(1);
-
-	shake();
-	reverse();
-	reset();
-	sleep.sleep(1);
-
-	forward();
-	reset();
-	sleep.sleep(1);
-
-
+}
+//reverse();
+//reverse();
