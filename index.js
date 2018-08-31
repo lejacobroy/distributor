@@ -60,9 +60,12 @@ rpio.close(shaker, rpio.PIN_RESET);
 }
 
 function shake(){
-	rpio.open(shaker, rpio.OUTPUT, rpio.HIGH);
+	//rpio.open(shaker, rpio.OUTPUT, rpio.HIGH);
+	rpio.open(pin1, rpio.OUTPUT, rpio.HIGH);
+	rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
 	sleep.sleep(15);
-	rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
+	//rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
+	rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
 }
 
 function forward(){
