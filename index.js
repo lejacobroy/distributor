@@ -9,6 +9,7 @@ var pin1 = 13;
 var pin2 = 11;
 var pin3 = 15;
 var pin4 = 12;
+var shaker = 19;
 var steps = 150;
 var backsteps = 50;
 var i = 0;
@@ -24,7 +25,7 @@ rpio.close(pin1, rpio.PIN_RESET);
 rpio.close(pin2, rpio.PIN_RESET);
 rpio.close(pin3, rpio.PIN_RESET);
 rpio.close(pin4, rpio.PIN_RESET);
-
+rpio.close(shaker, rpio.PIN_RESET);
 /*
  * Set the initial state to low.  The state is set prior to the pin
  * being actived, so is safe for devices which require a stable setup.
@@ -34,7 +35,7 @@ rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
 rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-
+rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
 /*
  * The sleep functions block, but rarely in these simple programs does
  * one care about that.  Use a setInterval()/setTimeout() loop instead
@@ -211,13 +212,21 @@ function reverse() {
 }
 
 function reset(){
-	rpio.close(pin1, rpio.PIN_RESET);
+rpio.close(pin1, rpio.PIN_RESET);
 rpio.close(pin2, rpio.PIN_RESET);
 rpio.close(pin3, rpio.PIN_RESET);
 rpio.close(pin4, rpio.PIN_RESET);
+rpio.close(shaker, rpio.PIN_RESET);
+}
+
+function shake(){
+	rpio.open(shaker, rpio.OUTPUT, rpio.HIGH);
+	sleep.sleep(15);
+	rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
 }
 
 
+	shake();
 	reverse();
 	reset();
 	sleep.sleep(1);
@@ -226,6 +235,7 @@ rpio.close(pin4, rpio.PIN_RESET);
 	reset();
 	sleep.sleep(1);
 
+	shake();
 	reverse();
 	reset();
 	sleep.sleep(1);
@@ -234,4 +244,4 @@ rpio.close(pin4, rpio.PIN_RESET);
 	reset();
 	sleep.sleep(1);
 
-	sleep.sleep(60)
+
