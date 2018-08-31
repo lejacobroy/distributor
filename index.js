@@ -232,5 +232,6 @@ shake();
 	sleep.sleep(1);	
 	forward();
 }
+shake();
 //reverse();
 //reverse();
