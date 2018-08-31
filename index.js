@@ -63,7 +63,7 @@ function shake(){
 	//rpio.open(shaker, rpio.OUTPUT, rpio.HIGH);
 	rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 	rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
-	sleep.sleep(5);
+	sleep.sleep(2);
 	//rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
 	rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 }
@@ -232,6 +232,5 @@ shake();
 	sleep.sleep(1);	
 	forward();
 }
-shake();
 reverse();
 reverse();
