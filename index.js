@@ -5,10 +5,10 @@ var sleep = require('sleep');
 //var current_hour = date.getHours();
 //var current_minutes = date.getMinutes();
 
-var pin1 = 13;
-var pin2 = 11;
-var pin3 = 15;
-var pin4 = 12;
+var pin1 = 11;
+var pin2 = 12;
+var pin3 = 13;
+var pin4 = 15;
 var shaker = 18;
 var steps = 225;
 var backsteps = 50;
