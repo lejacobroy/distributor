@@ -1,5 +1,4 @@
-var rpio = require('rpio');
-var sleep = require('sleep');
+var rpio = require('rpio'); var sleep = require('sleep');
 
 //var date = new Date();
 //var current_hour = date.getHours();
@@ -10,7 +9,7 @@ var pin2 = 12;//15;//12;
 var pin3 = 13;//11;//13;
 var pin4 = 15;//12;//15;
 //var shaker = 18;
-var steps = 100;
+var steps = 70;
 var backsteps = 40;
 var i = 0;
 var y = 0;
@@ -81,7 +80,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==1) {
@@ -89,7 +88,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==2) {
@@ -97,7 +96,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==3) {
@@ -105,7 +104,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==4) {
@@ -113,7 +112,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==5) {
@@ -121,7 +120,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==6) {
@@ -129,7 +128,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==7) {
@@ -137,7 +136,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==7) {
@@ -164,7 +163,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==6) {
@@ -172,7 +171,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==5) {
@@ -180,7 +179,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==4) {
@@ -188,7 +187,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==3) {
@@ -196,7 +195,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==2) {
@@ -204,7 +203,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==1) {
@@ -212,7 +211,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==0) {
@@ -220,7 +219,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(3); 
+		rpio.msleep(4); 
 	}
 
 	if (i==7) {
@@ -232,6 +231,7 @@ function reverse() {
 	sleep.sleep(1);	
 	forward();
 }
+reverse()
 reverse();
-reverse();
+//reverse();
 //forward();
