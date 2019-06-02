@@ -1,21 +1,17 @@
-var rpio = require('rpio'); var sleep = require('sleep');
+var rpio = require('rpio');
+var sleep = require('sleep');
 
 //var date = new Date();
 //var current_hour = date.getHours();
 //var current_minutes = date.getMinutes();
-function msleep(n) {
-  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
-}
-function sleep(n) {
-  msleep(n*1000);
-}
-var pin1 = 11;//13;//11;
-var pin2 = 12;//15;//12;
-var pin3 = 13;//11;//13;
-var pin4 = 15;//12;//15;
-//var shaker = 18;
-var steps = 70;
-var backsteps = 40;
+
+var pin1 = 13;
+var pin2 = 11;
+var pin3 = 15;
+var pin4 = 12;
+var shaker = 18;
+var steps = 225;
+var backsteps = 50;
 var i = 0;
 var y = 0;
 
@@ -29,7 +25,7 @@ rpio.close(pin1, rpio.PIN_RESET);
 rpio.close(pin2, rpio.PIN_RESET);
 rpio.close(pin3, rpio.PIN_RESET);
 rpio.close(pin4, rpio.PIN_RESET);
-//rpio.close(shaker, rpio.PIN_RESET);
+rpio.close(shaker, rpio.PIN_RESET);
 /*
  * Set the initial state to low.  The state is set prior to the pin
  * being actived, so is safe for devices which require a stable setup.
@@ -39,7 +35,7 @@ rpio.open(pin1, rpio.OUTPUT, rpio.LOW);
 rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-//rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
+rpio.open(shaker, rpio.OUTPUT, rpio.LOW);
 /*
  * The sleep functions block, but rarely in these simple programs does
  * one care about that.  Use a setInterval()/setTimeout() loop instead
@@ -60,7 +56,7 @@ rpio.close(pin1, rpio.PIN_RESET);
 rpio.close(pin2, rpio.PIN_RESET);
 rpio.close(pin3, rpio.PIN_RESET);
 rpio.close(pin4, rpio.PIN_RESET);
-//rpio.close(shaker, rpio.PIN_RESET);
+rpio.close(shaker, rpio.PIN_RESET);
 }
 
 function shake(){
@@ -85,7 +81,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==1) {
@@ -93,7 +89,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==2) {
@@ -101,7 +97,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==3) {
@@ -109,7 +105,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==4) {
@@ -117,7 +113,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==5) {
@@ -125,7 +121,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==6) {
@@ -133,7 +129,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==7) {
@@ -141,7 +137,7 @@ function forward(){
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==7) {
@@ -155,7 +151,7 @@ function forward(){
 
 function reverse() {
 
-	shake();
+shake();
 		for (var y = 0; y <= backsteps; y++) {
 		if (i==7) {
 			i=0;
@@ -168,7 +164,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==6) {
@@ -176,7 +172,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==5) {
@@ -184,7 +180,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==4) {
@@ -192,7 +188,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==3) {
@@ -200,7 +196,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.LOW);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==2) {
@@ -208,7 +204,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.HIGH);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==1) {
@@ -216,7 +212,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==0) {
@@ -224,7 +220,7 @@ function reverse() {
 		rpio.open(pin2, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin3, rpio.OUTPUT, rpio.LOW);
 		rpio.open(pin4, rpio.OUTPUT, rpio.HIGH);
-		rpio.msleep(4); 
+		rpio.usleep(3); 
 	}
 
 	if (i==7) {
@@ -236,7 +232,4 @@ function reverse() {
 	sleep.sleep(1);	
 	forward();
 }
-reverse()
-reverse();
-//reverse();
-//forward();
+forward();

@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "rpio": "^0.9.22",
-    "sleep": "^5.2.3",
     "stepper-wiringpi": "0.0.2"
   }
 }
