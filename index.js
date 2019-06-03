@@ -1,4 +1,5 @@
 var rpio = require('rpio')
+var sleep = require('sleep')
 
 // var date = new Date();
 // var current_hour = date.getHours();
