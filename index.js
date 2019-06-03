@@ -3,12 +3,7 @@ var rpio = require('rpio')
 // var date = new Date();
 // var current_hour = date.getHours();
 // var current_minutes = date.getMinutes();
-function msleep (n) {
-  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n)
-}
-function sleep (n) {
-  msleep(n * 1000)
-}
+
 var pin1 = 11// 13;//11;
 var pin2 = 12// 15;//12;
 var pin3 = 13// 11;//13;
